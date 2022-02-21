@@ -4,7 +4,7 @@ def res(hod1):
     hod = hod1.split('-')
     was = list(hod[0])
     will = list(hod[1])
-    if len(hod1) > 5 or type(was[0]) != str or type(will[0]) != str:
+    if type(was[0]) != str or type(will[0]) != str:
         return 'ERROR'
     if ord(was[1]) < 48 or ord(was[1]) > 57 or ord(will[1]) <48 or ord(will[1]) > 57:
         return 'ERROR'
