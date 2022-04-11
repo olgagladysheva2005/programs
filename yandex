@@ -1,0 +1,22 @@
+import random
+from pprint import pprint
+
+
+def make_bingo():
+    a = []
+    d = True
+    while len(a) != 5:
+        b = random.sample(range(1, 75), 5)
+        for j in b:
+            for x in a:
+                for y in x:
+                    if j == y:
+                        d = False
+        if d:
+            a.append(b)
+    a[2][2] = 0
+    a = tuple([tuple(i) for i in a])
+    pprint(a)
+
+
+make_bingo()
